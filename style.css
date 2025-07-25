@@ -1,3 +1,6 @@
+/* ===========================
+   Base Styles
+   =========================== */
 body {
   margin: 0;
   font-family: sans-serif;
@@ -6,6 +9,9 @@ body {
   color: #333;
 }
 
+/* ===========================
+   Navigation Bar
+   =========================== */
 nav {
   background: #333;
   color: #fff;
@@ -35,6 +41,9 @@ nav a:hover {
   border-radius: 4px;
 }
 
+/* ===========================
+   Hero Section
+   =========================== */
 .hero {
   padding: 2rem 1rem;
   max-width: 700px;
@@ -42,7 +51,9 @@ nav a:hover {
   text-align: center;
 }
 
-
+/* ===========================
+   Footer
+   =========================== */
 footer {
   text-align: center;
   padding: 2rem;
@@ -50,6 +61,9 @@ footer {
   color: #666;
 }
 
+/* ===========================
+   About Section
+   =========================== */
 .about-paragraph {
   text-align: left;
   margin: 0 auto;
@@ -58,38 +72,208 @@ footer {
   line-height: 1.6;
 }
 
+/* ===========================
+   Blog Section
+   =========================== */
 .blog-section {
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .blog-post {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border-left: 4px solid #333;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 2rem;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-left: 5px solid #333;
+  transition: box-shadow 0.2s;
+}
+
+.blog-post:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
 }
 
 .blog-post h2 {
   margin-top: 0;
+  margin-bottom: 0.5rem;
   color: #222;
+  font-size: 1.4rem;
 }
 
 .blog-post .date {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #888;
   margin-bottom: 0.75rem;
 }
 
-/* Section Styling */
+.blog-post p {
+  color: #444;
+  font-size: 1.08rem;
+  margin: 0.5rem 0 0 0;
+}
+
+/* ===========================
+   Section Styling (Shared)
+   =========================== */
 .hero, .blog-section {
   padding: 2rem 1rem;
   text-align: center;
 }
 
-/* Responsive Adjustments */
+/* ===========================
+   Contact Form Styling
+   =========================== */
+form {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #222;
+  text-align: left;
+}
+
+form input,
+form textarea {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #f7f7f7;
+  transition: border 0.2s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #333;
+  outline: none;
+}
+
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+form button,
+form input[type="submit"] {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+  background: #555;
+}
+
+/* ===========================
+   Portfolio Button Styling
+   =========================== */
+.portfolio-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.portfolio-btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: #333;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+  background: #0074d9;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+
+/* ===========================
+   Portfolio Block Styling
+   =========================== */
+.portfolio-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.portfolio-block {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-left: 5px solid #0074d9;
+  transition: box-shadow 0.2s;
+}
+
+.portfolio-block:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+
+.portfolio-block h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #222;
+  font-size: 1.6rem;
+}
+
+.portfolio-block p {
+  margin: 0.5rem 0 1rem 0;
+  color: #444;
+  font-size: 1.08rem;
+}
+
+.portfolio-block ul {
+  margin: 0 0 1rem 1.2rem;
+  padding: 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.portfolio-block a {
+  text-decoration: none;
+}
+
+/* ===========================
+   Responsive Adjustments
+   =========================== */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -110,69 +294,3 @@ footer {
   }
 }
 
-/* Contact Form Styling */
-form {
-  background-color: #fff;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 600px;   
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  font-size: 1rem;
-}
-
-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: #222;
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="file"],
-form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 1rem;
-  background-color: #fafafa;
-}
-
-form input[type="file"] {
-  padding: 0.5rem;
-  background-color: #fff;
-}
-
-form button[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-form button[type="submit"]:hover {
-  background-color: #555;
-}
-
-/* Mobile Responsive Tweaks */
-@media (max-width: 600px) {
-  form {
-    padding: 1rem;
-    margin: 1rem;
-  }
-
-  form input,
-  form textarea,
-  form button {
-    font-size: 1rem;
-  }
-}
