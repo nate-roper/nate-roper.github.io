@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – My Minimal Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://nateroper.com/frankensite/" target="_blank">Frankensite</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Contact Me</h1>
+      <p>If you’d like to get in touch, feel free to send a message below.</p>
+
+      <form action="https://formspree.io/f/mdkdgdol" method="POST" enctype="multipart/form-data" style="max-width: 600px; margin: 2rem auto; text-align: left;">
+        <!-- Redirect on success -->
+        <input type="hidden" name="_redirect" value="https://nateroper.com/thank-you.html">
+
+        <!-- Spam Protection (Honeypot) -->
+        <input type="text" name="_honey" style="display:none">
+
+        <!-- Disable CAPTCHA -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="6" required></textarea><br><br>
+
+        <label for="file">Attach a file:</label><br>
+        <input type="file" id="file" name="file"><br><br>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Nate Roper</p>
+  </footer>
+</body>
+</html>
